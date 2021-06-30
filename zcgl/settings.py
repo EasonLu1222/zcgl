@@ -124,3 +124,5 @@ handler404 = 'users.views.page_not_found'
 
 # 全局500配置，名称必须是handler500
 handler500 = 'users.views.page_error'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

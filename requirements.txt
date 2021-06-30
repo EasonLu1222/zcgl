@@ -3,7 +3,7 @@ Django==2.2.3
 django-excel==0.0.10
 django-pure-pagination==0.3.0
 lml==0.0.9
-mysqlclient @ file:///../..//zcgl/mysqlclient-1.4.6-cp37-cp37m-win32.whl
+mysqlclient==1.4.6
 pyexcel==0.5.15
 pyexcel-io==0.5.20
 pyexcel-webio==0.1.4
