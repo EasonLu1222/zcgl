@@ -102,7 +102,7 @@ class ServerAddView(LoginRequiredMixin, View):
         else:
             users = UserProfile.objects.filter(is_superuser=0)
             server_types = ServerType.objects.all()
-            return render(request, 'servers/server_add.html', {'msg': '输入错误！', 'users': users,
+            return render(request, 'servers/server_add.html', {'msg': '輸入錯誤！', 'users': users,
                                                                'server_form': server_form, 'server_types': server_types})
 
 
@@ -167,7 +167,7 @@ class ServerModifyView(LoginRequiredMixin, View):
             server_types = ServerType.objects.all()
             return render(request, 'servers/server_detail.html', {'users': users, 'server': server,
                                                                   'server_types': server_types,
-                                                                  'msg': '输入错误！', 'server_form': server_form})
+                                                                  'msg': '輸入錯誤！', 'server_form': server_form})
 
 
 # 资产删除
@@ -209,8 +209,8 @@ class ServerExportView(LoginRequiredMixin, View):
             servers = Server.objects.all().order_by('zctype')
         servers = servers.values('id', 'zctype__zctype', 'ipaddress', 'description', 'brand', 'zcmodel', 'zcnumber',
                                  'zcpz', 'owner__username', 'undernet', 'guartime', 'comment')
-        colnames = ['序号', '资产类型', 'IP地址', '功能描述', '设备品牌', '设备型号', '设备序号', '设备配置',
-                    '管理人员', '所在地方', '保修期', '备注']
+        colnames = ['序號', '資產類型', 'IP地址', '功能描述', '設備品牌', '設備型號', '設備序號', '設備配置',
+                    '管理人員', '所在地方', '保修期', '備註']
         response = create_excel(colnames, servers, 'zcgl')
         return response
 
@@ -255,7 +255,7 @@ class TypeAddView(LoginRequiredMixin, View):
                 new_servertype.save()
                 return HttpResponseRedirect((reverse('servers:type_list')))
         else:
-            return render(request, 'servers/type_add.html', {'msg': '输入错误！', 'servertype_form': servertype_form})
+            return render(request, 'servers/type_add.html', {'msg': '輸入錯誤！', 'servertype_form': servertype_form})
 
 
 # 资产类型详情
@@ -285,5 +285,5 @@ class TypeModifyView(LoginRequiredMixin, View):
                 return HttpResponseRedirect((reverse('servers:type_list')))
         else:
             return render(request, 'servers/type_detail.html', {'server_type': exist_server_type,
-                                                                'msg': '输入错误！',
+                                                                'msg': '輸入錯誤！',
                                                                 'servertype_form': servertype_form})

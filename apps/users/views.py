@@ -33,9 +33,9 @@ class UserLoginView(View):
                 login(request, user)
                 return HttpResponseRedirect(reverse('index'))
             else:
-                return render(request, 'users/login.html', {'msg': '账号或密码错误'})
+                return render(request, 'users/login.html', {'msg': '帳號或密碼錯誤'})
         else:
-            return render(request, 'users/login.html', {'msg': '账号或密码错误', 'login_form': login_form})
+            return render(request, 'users/login.html', {'msg': '帳號或密碼輸入錯誤', 'login_form': login_form})
 
 
 # 用户退出
@@ -63,9 +63,9 @@ class UserPwdModifyView(LoginRequiredMixin, View):
                 user.save()
                 return HttpResponseRedirect((reverse('users:user_login')))
             else:
-                return render(request, 'users/user_pwd_modify.html', {'msg': '两次密码不一致！'})
+                return render(request, 'users/user_pwd_modify.html', {'msg': '兩次密碼不一致！'})
         else:
-            return render(request, 'users/user_pwd_modify.html', {'msg': '密码不能为空！',
+            return render(request, 'users/user_pwd_modify.html', {'msg': '密码不能為空！',
                                                                   'user_pwd_modify_form': user_pwd_modify_form})
 
 
@@ -111,14 +111,14 @@ class UserAddView(LoginRequiredMixin, View):
             isadmin = request.POST.get('isadmin')
             user = UserProfile.objects.filter(username=username)
             if user:
-                return render(request, 'users/user_add.html', {'msg': '用户 '+username+' 已存在！'})
+                return render(request, 'users/user_add.html', {'msg': '用戶 '+username+' 已存在！'})
             else:
                 new_user = UserProfile(username=username, staff_no=staff_no, password=make_password(pwd), department=department,
                                        bg_telephone=bg_telephone, mobile=mobile, email=email, isadmin=isadmin)
                 new_user.save()
                 return HttpResponseRedirect((reverse('users:user_list')))
         else:
-            return render(request, 'users/user_add.html', {'msg': '输入错误！', 'userinfo_form': userinfo_form})
+            return render(request, 'users/user_add.html', {'msg': '输入錯誤！', 'userinfo_form': userinfo_form})
 
 
 # 用户详情
@@ -152,7 +152,7 @@ class UserModifyView(LoginRequiredMixin, View):
                 user.save()
                 return HttpResponseRedirect((reverse('users:user_list')))
         else:
-            return render(request, 'users/user_detail.html', {'user': user, 'msg': '输入错误！',
+            return render(request, 'users/user_detail.html', {'user': user, 'msg': '輸入錯誤！',
                                                               'userinfo_form': userinfo_form})
 
 
@@ -186,7 +186,7 @@ class UserExportView(LoginRequiredMixin, View):
         else:
             users = UserProfile.objects.filter(is_superuser=0).order_by('-is_staff', 'staff_no')
         columns_names = ['id', 'username', 'staff_no', 'department', 'bg_telephone', 'mobile', 'email', 'is_staff']
-        return excel.make_response_from_query_sets(users, columns_names, 'xls', file_name='人员列表')
+        return excel.make_response_from_query_sets(users, columns_names, 'xls', file_name='人員列表')
 
 
 # 操作日志视图(所有用户可见)

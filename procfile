@@ -1,1 +1,1 @@
-web: gunicorn henrysite.wsgi --log-file -
+web: gunicorn zcgl.wsgi

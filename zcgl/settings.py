@@ -129,6 +129,3 @@ handler500 = 'users.views.page_error'
 
 #添加如下代码
 django_heroku.settings(locals())
-
-#设置静态路径STATIC_ROOT
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')

@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% block title %}资产管理 - 资产列表{% endblock %}
+{% block title %}資產管理 - 資產列表{% endblock %}
 {% block custome_css %}{% endblock %}
 {% block content %}
     <div class="content">
-        <p>资产列表</p>
+        <p>資產列表</p>
         <div class="form-class">
             <form action="" method="get">
                 <input id="search" class="form-text" type="text" placeholder="搜索..." name="search" value="{% if search %}{{ search }}{% endif %}"/>
@@ -15,24 +15,24 @@
         </div>
         {% if request.user.isadmin == '1' or request.user.is_superuser == 1 %}
             <button class="button-insert" id="btn_add">添加資產</button>
-            <button class="button-insert" id="btn_export_list">导出列表</button>
+            <button class="button-insert" id="btn_export_list">導出列表</button>
         {% endif %}
         <br/><br/>
         <table class="table-list">
             <thead>
                 <tr>
-                    <th>序号</th>
-                    <th>资产类型</th>
+                    <th>序號</th>
+                    <th>資產類型</th>
                     <th>IP地址</th>
                     <th>功能描述</th>
-                    <th>设备品牌</th>
-                    <th>设备型号</th>
-                    <th>设备序号</th>
-                    <th>设备配置</th>
-                    <th>管理人员</th>
+                    <th>設備品牌</th>
+                    <th>設備型號</th>
+                    <th>設備序號</th>
+                    <th>設備配置</th>
+                    <th>管理人員</th>
                     <th>所在地方</th>
                     <th>保修期</th>
-                    <th>备注</th>
+                    <th>備註</th>
                 </tr>
             </thead>
             <tbody>
