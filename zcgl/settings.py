@@ -1,5 +1,6 @@
 import os
 import sys
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -14,7 +15,8 @@ SECRET_KEY = '74+-r=c=(lv+%n1@&o$hu6c@2mrkv9l^90iailhhzlrjmk)k^j'
 # 部署到生产中需要将debug改为false
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*',
+                 'zcgl.herokuapp.com']
 
 # Application definition
 
@@ -125,4 +127,8 @@ handler404 = 'users.views.page_not_found'
 # 全局500配置，名称必须是handler500
 handler500 = 'users.views.page_error'
 
+#添加如下代码
+django_heroku.settings(locals())
+
+#设置静态路径STATIC_ROOT
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
