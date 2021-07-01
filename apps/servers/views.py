@@ -1,8 +1,4 @@
 
-import sys
-
-sys.path.append(".")
-
 from django.shortcuts import render
 from django.views.generic.base import View
 from django.http.response import HttpResponseRedirect, HttpResponse
@@ -14,7 +10,7 @@ import csv
 from .models import Server, ServerType, ServerHis
 from .forms import ServerForm, ServerTypeForm
 
-from users.models import UserOperateLog, UserProfile
+from users.models import UserOperateLog, UserProfilef
 from zcgl.settings import per_page
 from apps.utils.mixin_utils import LoginRequiredMixin
 
