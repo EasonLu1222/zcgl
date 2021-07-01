@@ -64,11 +64,11 @@ WSGI_APPLICATION = 'zcgl.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql-acute-94104',
         'NAME': 'BOOKSTORE',
-        'USER': 'postgres',
-        'PASSWORD': 'f26842012',
-        'HOST': 'localhost',
+        'USER': 'bkmopftsubgoyr',
+        'PASSWORD': 'ccd47d813f49d8c5f3516fe92169950dde312b26f11b23c773aef7f1a6382f98',
+        'HOST': 'ec2-52-203-27-62.compute-1.amazonaws.com',
         'PORT': '5432'  #PostgreSQL Port號
     }
 }
