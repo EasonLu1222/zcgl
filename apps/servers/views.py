@@ -10,7 +10,7 @@ import csv
 from .models import Server, ServerType, ServerHis
 from .forms import ServerForm, ServerTypeForm
 
-from users.models import UserOperateLog, UserProfilef
+from users.models import UserOperateLog, UserProfile
 from zcgl.settings import per_page
 from apps.utils.mixin_utils import LoginRequiredMixin
 
