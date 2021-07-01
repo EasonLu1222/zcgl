@@ -2,7 +2,7 @@ from datetime import datetime
 
 from django.db import models
 
-from apps.users.models import UserProfile
+from users.models import UserProfile
 
 
 # 定义资产model
@@ -14,7 +14,7 @@ class Server(models.Model):
     zcmodel = models.CharField(max_length=50, verbose_name='设备型号', blank=True)
     zcnumber = models.CharField(max_length=50, verbose_name='设备序号', blank=True)
     zcpz = models.CharField(max_length=100, verbose_name='设备配置', blank=True)
-    owner = models.ForeignKey('apps.users.UserProfile', on_delete=models.SET_NULL, null=True, blank=True)
+    owner = models.ForeignKey('users.UserProfile', on_delete=models.SET_NULL, null=True, blank=True)
     undernet = models.CharField(max_length=10, verbose_name='')
     guartime = models.CharField(max_length=50, verbose_name='保修期', blank=True)
     comment = models.CharField(max_length=300, verbose_name='备注', blank=True)
