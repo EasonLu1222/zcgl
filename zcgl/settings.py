@@ -16,7 +16,8 @@ SECRET_KEY = '74+-r=c=(lv+%n1@&o$hu6c@2mrkv9l^90iailhhzlrjmk)k^j'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*',
-                 'zcgl.herokuapp.com']
+                 'zcgl.herokuapp.com',
+                 "127.2.0.1"]
 
 # Application definition
 
