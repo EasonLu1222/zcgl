@@ -15,9 +15,7 @@ SECRET_KEY = '74+-r=c=(lv+%n1@&o$hu6c@2mrkv9l^90iailhhzlrjmk)k^j'
 # 部署到生产中需要将debug改为false
 DEBUG = True
 
-ALLOWED_HOSTS = ['*',
-                 'zcgl.herokuapp.com',
-                 "127.2.0.1"]
+ALLOWED_HOSTS = ['localhost']
 
 # Application definition
 
@@ -70,7 +68,7 @@ DATABASES = {
         'NAME': 'BOOKSTORE',
         'USER': 'postgres',
         'PASSWORD': 'f26842012',
-        'HOST': '127.2.0.1',
+        'HOST': 'localhost',
         'PORT': '5432'  #PostgreSQL Port號
     }
 }
