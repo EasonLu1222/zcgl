@@ -15,7 +15,7 @@ SECRET_KEY = '74+-r=c=(lv+%n1@&o$hu6c@2mrkv9l^90iailhhzlrjmk)k^j'
 # 部署到生产中需要将debug改为false
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost','zcgl.herokuapp.com', '127.2.0.1', '127.0.0.1']
 
 # Application definition
 
