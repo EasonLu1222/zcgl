@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='userprofile',
             name='is_staff',
-            field=models.CharField(blank=True, choices=[('1', '是'), ('0', '否')], default='1', max_length=1, verbose_name='是否在职'),
+            field=models.CharField(blank=True, choices=[('1', '是'), ('0', '否')], default='1', max_length=1, verbose_name='是否在職'),
         ),
     ]

@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% block title %}资产管理 - 资产类型详情{% endblock %}
+{% block title %}資產管理 - 資產類型詳情{% endblock %}
 {% block custome_css %}
     <link rel="stylesheet" href="{% static 'servers/css/server-add.css' %}">
     <link rel="stylesheet" href="{% static 'servers/css/server-detail.css' %}">
 {% endblock %}
 {% block content %}
     <div class="content">
-        <p class="content-note1">修改资产类型<span class="content-note2"> (标注为*为必填项)</span></p>
+        <p class="content-note1">修改资產類型<span class="content-note2"> (標註為*為必填项)</span></p>
         <div style="clear:both"></div>
         <form class="form-table" action="{% url 'servers:type_modify' %}" method="post">
             <input type="hidden" id="type_id" name="type_id" value="{{ server_type.id }}"/>
             <div class="form-list">
-                <span>*资产类型</span>
-                <input {% if servertype_form.errors.zctype %}class="input-error"{% endif %} type="text" name="zctype" value="{{ server_type.zctype }}" placeholder="不超过20个字符"/>
+                <span>*資產類型</span>
+                <input {% if servertype_form.errors.zctype %}class="input-error"{% endif %} type="text" name="zctype" value="{{ server_type.zctype }}" placeholder="不超過20个字符"/>
             </div>
             {% if msg %}
                 <div class="error">{{ msg }}</div>

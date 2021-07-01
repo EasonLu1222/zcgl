@@ -183,7 +183,7 @@ class ServerDeleteView(LoginRequiredMixin, View):
         server_his = ServerHis(serverid=server.id, zctype=server.zctype.zctype, ipaddress=server.ipaddress,
                                description=server.description, brand=server.brand, zcmodel=server.zcmodel,
                                zcnumber=server.zcnumber, zcpz=server.zcpz, owner=user_name,
-                               undernet=server.undernet, guartime=server.guartime, comment='该记录被删除')
+                               undernet=server.undernet, guartime=server.guartime, comment='該紀錄被刪除')
         server_his.save()
 
         # 删除该记录

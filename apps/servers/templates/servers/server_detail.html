@@ -91,12 +91,12 @@
                     <th>功能描述</th>
                     <th>設備品牌</th>
                     <th>設備型號</th>
-                    <th>设备序号</th>
-                    <th>设备配置</th>
-                    <th>管理人员</th>
+                    <th>設備序號</th>
+                    <th>設備配置</th>
+                    <th>管理人員</th>
                     <th>所在地方</th>
                     <th>保修期</th>
-                    <th>备注</th>
+                    <th>備註</th>
                     <th>修改时间</th>
                 </tr>
             </thead>
@@ -152,7 +152,7 @@
         function btn_delete() {
             var server_id = document.getElementById("server_id").value;
             var url = "{% url 'servers:server_delete' 0 %}";
-            var conf = confirm("确定删掉该条数据？");
+            var conf = confirm("确定删掉該條數據？");
             if (conf){
                 location.href = url.replace('0', server_id);
             }
