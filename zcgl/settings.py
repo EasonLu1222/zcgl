@@ -65,7 +65,7 @@ WSGI_APPLICATION = 'zcgl.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BOOKSTORE',
+        'NAME': 'de6bk22e4t13sr',
         'USER': 'bkmopftsubgoyr',
         'PASSWORD': 'ccd47d813f49d8c5f3516fe92169950dde312b26f11b23c773aef7f1a6382f98',
         'HOST': 'ec2-52-203-27-62.compute-1.amazonaws.com',
