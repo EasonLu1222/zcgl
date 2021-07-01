@@ -2,7 +2,7 @@ from datetime import datetime
 
 from django.db import models
 
-from users.models import UserProfile
+from apps.users.models import UserProfile
 
 
 # 定义资产model
