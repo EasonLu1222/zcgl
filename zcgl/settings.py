@@ -15,7 +15,7 @@ SECRET_KEY = '74+-r=c=(lv+%n1@&o$hu6c@2mrkv9l^90iailhhzlrjmk)k^j'
 # 部署到生产中需要将debug改为false
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','zcgl.herokuapp.com', '127.2.0.1', '127.0.0.1', 'postgres://bkmopftsubgoyr:ccd47d813f49d8c5f3516fe92169950dde312b26f11b23c773aef7f1a6382f98@ec2-52-203-27-62.compute-1.amazonaws.com:5432/de6bk22e4t13sr']
+ALLOWED_HOSTS = ['localhost','zcgl.herokuapp.com/', '127.2.0.1', '127.0.0.1', 'postgres://bkmopftsubgoyr:ccd47d813f49d8c5f3516fe92169950dde312b26f11b23c773aef7f1a6382f98@ec2-52-203-27-62.compute-1.amazonaws.com:5432/de6bk22e4t13sr']
 
 # Application definition
 
